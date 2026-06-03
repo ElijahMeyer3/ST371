@@ -1,0 +1,83 @@
+---
+title: ST371E Homework 2 - Probability Properties and Counting Techniques
+output: pdf_document
+---
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{solution*}{Solution}
+\newtheorem{prop}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newcommand{\p}{\mathbb{P}}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The following is the second homework assignment for ST371. This assignment is due May 31st via a pdf submission to Gradescope. The link to submitting to Gradescope can be found on Moodle. It is strongly encouraged that your work is submitted on this paper and written neatly so that rendering is easily legible and your assigning of pages on Gradescope is straightforward. Remember to show all of your work, \textbf{and use proper notation}, for a given problem as it is not just the final answer that is worth credit. Make sure to include any code you write as part of your submission.
+
+\begin{enumerate}
+\item (10 points) A fair six-sided die is rolled repeatedly, until the first time that an even number is obtained. 
+  \begin{enumerate}
+  \item What is the sample space for this experiment? (5 points)
+  \vspace{1.5in}
+  \item How would you classify the sample space, as a set? (2 points)
+  \vspace{.5in}
+  \item Without performing any calculations, describe the likelihood of needing to roll this die 10 times before the experiment terminates. Explain. (3 points) 
+  \end{enumerate}
+\vspace{1in}
+\item (10 points) Show that for any two events $A$ and $B$, we have \[\p(A\cap B) \geq \p(A) + \p(B) -1\]
+\newpage
+\item (20 points) Out of the students in a particular statistics class (all sections), 55\% are geniuses, 35\% love chocolate, 35\% have Iphones, 20\% are geniuses that love chocolate, 25\% are geniuses that have Iphones, 15\% love chocolate and have Iphones and 10\% are geniuses that love chocolate and have Iphones. 
+  \begin{enumerate}
+  \item Fill in the Venn diagram below with the \textbf{appropriate probabilities}. (8 points)
+    \begin{center}
+    \includegraphics{VennDiagram.png}
+    \end{center}
+  \item What is the probability that a randomly selected student loves chocolate but is not a genius and does not have an Iphone? (3 points)
+  \vspace{.75in}
+  \item What is the probability that a randomly selected student is either a genius or has an Iphone? (3 points)
+  \vspace{.75in}
+  \item If all sections combined have a total of 1000 students, how many students would be in the symmetric difference between the set of students that are geniuses and the set of students that love chocolate? (6 points)
+  \end{enumerate}
+\newpage
+\item (20 points) The computers of six faculty members in a certain department are to be replaced. Two of the faculty members have selected laptop machines and the other four have chosen desktop machines. Suppose that only two of the setups can be done on a particular day, and the two computers to be set up are randomly selected from the six. 
+  \begin{enumerate}
+  \item What is the sample space for this experiment? Hint: there are 15 outcomes and an example of one is $(L_1,D_3)$. (6 points)
+  \vspace{1.4in}
+  \item What is the probability that both selected setups are for laptop computers? (3 points)
+  \vspace{1.4in}
+  \item What is the probability that both selected setups are desktop machines? (3 points)
+  \vspace{1.4in}
+  \item What is the probability that at least one selected setup is for a desktop computer? (4 points) 
+  \vspace{1.4in}
+  \item What is the probability that at least one computer of each type is chosen for setup? (4 points)
+  \end{enumerate}
+\newpage
+\item (10 points) A drawer of socks contains seven black socks, eight blue socks, and nine green socks. Two socks are chosen in the dark. 
+  \begin{enumerate}
+  \item What is the probability that they match? (6 points)
+  \vspace{3in}
+  \item What is the probability that a black pair is chosen? (4 points)
+  \end{enumerate}
+\newpage
+\item (15 points) Before attempting to answer the following questions, perform the steps outlined below using the seed 1284:
+  \begin{itemize}
+  \item Generate a set containing the numbers 1 to 50000, and store that set in an object called 'Set1'. 
+  \item Using the sample() function, generate a set that contains values from Set1 in no particular order, allowing for repeats. Store this set in an object called Omega. 
+  \item Generate three subsets of Omega of size 100. Each individual subset is to be made without replacement, but each individual subset should sample from the full Omega. Label these sets A, B and C, in that order.
+  \item \textbf{To acheive the intended subsets, once you have written the appropirate code, run it all at the same time}.
+  \end{itemize}
+  \begin{enumerate}
+  \item For each of the following, fill in the blank with the most appropriate symbol from: $\epsilon$, $\not \epsilon$ (5 points)
+    \begin{enumerate}
+    \item 50000 \underline{\hspace{.5in}} $\Omega$
+    \item 50000 \underline{\hspace{.5in}} $C$
+    \item 48231 \underline{\hspace{.5in}} $\Omega$
+    \item 48231 \underline{\hspace{.5in}} $A$
+    \item 2707 \underline{\hspace{.5in}} $B$
+    \end{enumerate}
+  \item Do the sets generated intersect? If so, state specifically which sets and what elements fall in the intersection. (5 points)
+  \vspace{1.5in}
+  \item Provide your code below. (5 points)
+  \end{enumerate}
+\end{enumerate}

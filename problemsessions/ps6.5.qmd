@@ -1,0 +1,107 @@
+---
+title: "Problem Session III"
+format: pdf
+---
+
+#### Warm-up question 
+
+What is the difference between conditional and unconditional probability?
+
+#### Question 1
+
+A university surveyed students about whether they own a car and whether they live on campus.
+
+The following information was collected:
+
+60% of students own a car.
+15% of students both own a car and live on campus.
+43% of students live on campus.
+
+Construct a probability tree diagram (see page 6 of your guided notes) based on this information. 
+
+
+\newpage 
+
+#### Question 2 
+
+A department store sells sport shirts in three sizes (small, medium, and large), three
+patterns (plaid, print, and stripe), and two sleeve lengths (long and short). The accompanying table
+gives the proportions of shirts sold in the various category combinations.
+
+| Length | Size   | Plaid | Print | Striped |
+|--------|--------|-------|-------|----------|
+| Short  | Small  | 0.04  | 0.02  | 0.05     |
+| Short  | Medium | 0.08  | 0.07  | 0.12     |
+| Short  | Large  | 0.03  | 0.07  | 0.08     |
+| Long   | Small  | 0.03  | 0.02  | 0.03     |
+| Long   | Medium | 0.10  | 0.05  | 0.07     |
+| Long   | Large  | 0.04  | 0.02  | 0.08     |
+
+(a) What is the probability that the next shirt sold is a medium, long-sleeved, print shirt? (2 points)
+
+\vspace{6em}
+
+
+(b) What is the probability that the next shirt sold is a medium print shirt? (4 points)
+
+\vspace{6em}
+
+
+(c) What is the probability that the next shirt sold is a long sleeved shirt? (4 points)
+
+\vspace{6em}
+
+
+(d) What is the probability that the next shirt sold has a print pattern? (4 points)
+
+\vspace{6em}
+
+
+(e) If the next shirt sold was a short sleeved plaid, what is the probability it was of medium size? (4
+points)
+
+\vspace{6em}
+
+
+(f) If the next shirt sold was a medium plaid, what is the probability it was long sleeved? (4 points)
+
+
+\vspace{6em}
+
+\newpage
+
+#### Question 3 
+
+What would make this an invalid joint probability distribution?
+
+Try and think of two potentail ideas...
+
+| Length | Size   | Plaid | Print | Striped |
+|--------|--------|-------|-------|----------|
+| Short  | Small  | 0.04  | 0.02  | 0.05     |
+| Short  | Medium | 0.08  | 0.07  | 0.12     |
+| Short  | Large  | 0.03  | 0.07  | 0.08     |
+| Long   | Small  | 0.03  | 0.02  | 0.03     |
+| Long   | Medium | 0.10  | 0.05  | 0.07     |
+| Long   | Large  | 0.04  | 0.02  | 0.08     |
+
+
+
+
+
+\newpage
+
+#### Question 4 
+
+A city survey categorizes households by pet ownership and activity level: 
+
+| Group      | Highly Active | Not Highly Active |
+| ---------- | ------------- | ----------------- |
+| Dog owners | 0.30          | 0.20              |
+| Cat owners | 0.15          | 0.15              |
+| No pets    | 0.05          | 0.15              |
+
+
+-- Compute the probability that a randomly selected household is highly active. 
+
+-- Compute the probability that a household owns a dog given that it is highly active. 

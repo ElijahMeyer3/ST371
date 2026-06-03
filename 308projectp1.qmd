@@ -1,0 +1,152 @@
+---
+title: "Project Part-1"
+subtitle: "Project Proposal"
+format: pdf
+---
+
+# Project Partners
+
+**Please communicate with your partners often**. Share contact information / establish the best way to communicate about the project. It is an expectation that you and your partner will contribute equally across all project components. Note: Just because you are in the same group doesn't mean you are entitled to the same grade. You will turn in a **peer evaluation form** in addition to the final project, which will factor into your final grade.
+
+No late work will be accepted. If you have a documented emergency that prevents you from
+completing a the project, please contact your instructor and provide proof of the emergency.
+
+# Purpose
+
+The main purpose of the project proposal is to help you think about the project early, so you
+can get a head start on finding data, practice reading in data, thinking about the questions
+you wish to answer, etc.
+
+The goal of the final project will be to ask meaningful questions on a data set
+you are interested in, and use the computing tools learned in class to help explore
+your questions.
+
+# Instructions
+
+Identify 1 data set you’re interested in using for the final project. If you’re unsure where to
+find data, you can use the list of potential data sources in the Resources for data sets section
+as a starting point. It may also help to think of topics you’re interested in investigating and
+find data sets on those topics.
+
+# Criteria for datasets
+
+The data sets should meet the following criteria:
+
+* At least 100 observations (or approved by your instructor)
+
+* At least 5 unique columns that are actual variables (or approved)
+
+  Identifier variables such as “name”, “social security number”, etc. are not useful
+  explanatory variables.
+
+  If you have multiple columns with the same information (e.g. “state abbreviation”
+  and “state name”), then they are not unique explanatory variables.
+
+* Data must be real (if you are unsure, do not choose these data)
+
+* Data sets must have a mix of quantitative and categorical variables
+
+# Resources for data
+
+You can find data wherever you like, but here are some recommendations to get you started.
+You shouldn’t feel constrained to data sets that are already in a tidy format, you can start
+with data that needs cleaning and tidying.
+
+1. The UCI machine learning repository: [https://archive.ics.uci.edu/](https://archive.ics.uci.edu/)
+
+2. Kaggle: [https://www.kaggle.com](https://www.kaggle.com)
+
+   Note: There are many fake data sets on Kaggle. Do not choose these.
+
+3. data.gov
+
+4. data.europa.eu
+
+If you have other data in mind that are not from these sources, please make sure that these
+data are real, and you are interested in analyzing them. Note: The data can not be from a R
+package/ already built into SAS. You need to be able to download the data and read the data
+in appropriately.
+
+# What you will turn in
+
+Your project proposal will consist of the following sections with the following information.
+
+# Introduction and data section
+
+For your data set:
+
+* Identify the source of the data.
+* State when and how it was originally collected (by the original data curator, not how you
+  found the data). If this information is not available, state that and write 1-2 sentences on how
+  that may impact your findings.
+* Write a brief description of the observations.
+* Explain why you are interested in these data.
+
+# Research Question
+
+You are tasked to write ONE research question. 
+
+Before writing your research questions, please see the following handout
+
+Your research questions should contain AT LEAST 3 variables. For example: What
+is the relationship between a penguin’s bill length and their flipper length for each of the
+species in our data set?
+
+Your research question should be clear and easily understood by a general audience. Again,
+when writing a research question, please think about the following:
+
+* What is your target audience?
+* Can the question be answered?
+
+This section in your proposal should contain:
+
+* A well formulated research question
+* Statement on why this question is important / matters
+* Identification if the variables you are working with are categorical or quantitative
+
+# Display your data
+
+For your data set:
+
+* Read the data in correctly
+* Use the `glimpse()` function to provide a glimpse of the data set
+
+An example of a properly glimpsed data set can be seen below:
+
+```r
+Rows: 344
+Columns: 8
+$ species <fct> Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel~
+$ island <fct> Torgersen, Torgersen, Torgersen, Torgersen, Torgerse~
+$ bill_length_mm <dbl> 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, ~
+$ bill_depth_mm <dbl> 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, ~
+$ flipper_length_mm <int> 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186~
+$ body_mass_g <int> 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, ~
+$ sex <fct> male, female, female, NA, female, male, female, male~
+$ year <int> 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007~
+```
+
+Notice that I can clearly see that these data have 8 columns, 344 rows, and have no obvious
+abnormalities with the data itself.
+
+# How to turn in
+
+You should turn in a well formatted PDF generated from Quarto with the following sub-
+sections to Gradescope.
+
+(Level - 1 header): Introduction and data
+
+(Level - 2 header): Research question
+
+(Level - 4 header): Why this matters and identification of variable types
+
+
+# Proposal Grading
+
+| Component                                             | Points |
+| ----------------------------------------------------- | ------ |
+| Total                                                 | 40 pts |
+| Introduction and data                                 | 15     |
+| Research Question                                    | 15     |
+| Why this matters and identification of variable types | 10     |
+

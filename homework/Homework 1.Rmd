@@ -1,0 +1,76 @@
+---
+title: "ST371 Homework 1 - Sets and Set Manipulations"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+```{=tex}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{solution*}{Solution}
+\newtheorem{prop}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newcommand{\p}{\mathbb{P}}
+```
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The following is the first homework assignment for ST371. This assignment is due May 31st via a pdf submission to Gradescope. The link to submitting to Gradescope can be found on Moodle (or you can go to Gradescope.com and find our course). It is strongly encouraged that your work is submitted on this paper and written neatly so that rendering is easily legible and your assigning of pages on Gradescope is straightforward. Remember to show all of your work for a given problem as it is not just the final answer that is worth credit. \textbf{Remember to write everything in proper mathematical notation}.
+
+Note: You are subject to lose points if you do not submit your assignment via Gradescope correctly (ex. incorrectly selecting pages). Please see Moodle on how to do so / please let us know if you have any questions!
+
+```{=tex}
+\begin{enumerate}
+\item (20 points) Let $A$ and $B$ be two sets.
+  \begin{enumerate}
+  \item (8 points) Using properties of set manipulation, show that \[A^c = (A^c\cap B) \cup (A^c\cap B^c) \text{ and } B^c = (A\cap B^c) \cup (A^c\cap B^c)\] Please note: pictures are good for convincing yourself the statement is true, but are not generally considered mathematical proof. \underline{Hint}: recall the distributive property. When doing a proof, start with one side of the equation, and show that it equals the other side completely. 
+  \newpage
+  \item (6 points) Show that \[(A\cap B)^c = (A^c\cap B)\cup (A^c\cap B^c) \cup (A\cap B^c)\] \underline{Hint}: recall the distributive property.
+  \vspace{4in}
+  \item (6 points) Consider rolling a fair six-sided die. Let $A$ be the set of outcomes where the roll is an odd number. Let $B$ be the set of outcomes where the roll is less than 4. Calculate the sets on both sides of the equality in (b) and verify that the equality holds. 
+  \end{enumerate}
+\newpage
+\item (20 points) Consider a given universal set $\Omega = \{a,b,c,d,e,f,g,h,i,j\}$. Let $A=\{a,c,e,g,i\}$, $B=\{b,c,d,e,f\}$ and $C=\{e,f,g,h\}$. 
+  \begin{enumerate}
+  \item (5 points) Find the set $A\cup B$. 
+  \vspace{.75in}
+  \item (5 points) Find the set $A\cap C$.
+  \vspace{.75in}
+  \item (5 points) What is the complement of $B$?
+  \vspace{.75in}
+  \item (5 points) Find the set $(A\cap B) \cup C$.
+  \end{enumerate}
+\vspace{.75in}
+\item (15 points) A group of 50 engineering students were surveyed about their favorite programming languages. 30 students liked Python, 25 students liked Java and 10 students liked both Python and Java.
+  \begin{enumerate}
+  \item (9 points) Draw a Venn diagram to illustrate this situation. Clearly label all regions.
+  \vspace{2in}
+  \item (3 points) How many students liked only Python?
+  \vspace{.75in}
+  \item (3 points) How many students liked neither Python nor Java?
+  \end{enumerate}
+\newpage
+\item (25 points) In a manufacturing process, three types of defects can occur in a product: electrical (E), mechanical (M), and optical (O). A batch of 100 products was inspected, and the following number of defects were found:
+  \begin{itemize}
+  \item 20 products had electrical defects
+  \item 15 products had mechanical defects
+  \item 12 products had optical defects
+  \item 5 products had both electrical and mechanical defects
+  \item 3 products had both electrical and optical defects
+  \item 2 products had both mechanical and optical defects
+  \item 1 product had all three types of defects
+  \end{itemize}
+  \begin{enumerate}
+  \item (10 points) Draw a Venn diagram to represent this situation. Clearly label all regions.
+  \vspace{2.3in}
+  \item (5 points) How many products had at least one type of defect?
+  \vspace{1in}
+  \item (5 points) How many products had exactly one type of defect?
+  \vspace{1in}
+  \item (5 points) How many products had no defects?
+  \end{enumerate}
+\end{enumerate}
+```

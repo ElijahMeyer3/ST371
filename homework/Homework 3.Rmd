@@ -1,0 +1,107 @@
+---
+title: ST371 Homework 3 - Conditional Probability and Independence
+output: pdf_document
+---
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{solution*}{Solution}
+\newtheorem{prop}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newcommand{\p}{\mathbb{P}}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The following is the third homework assignment for ST371. This assignment is due June 14th via a pdf submission to Gradescope. The link to submitting to Gradescope can be found on Moodle. It is strongly encouraged that your work is submitted on this paper and written neatly so that rendering is easily legible and your assigning of pages on Gradescope is straightforward. Remember to show all of your work for a given problem as it is not just the final answer that is worth credit.
+```{r,include=FALSE}
+#create the data for problem 1
+attach(mtcars)
+car.data <- data.frame(matrix(data=c(rownames(mtcars),mpg,wt,am),nrow=length(mpg)))
+colnames(car.data) <- c("Car","MPG","Weight","Trans")
+```
+
+
+\begin{enumerate}
+\item (10 points) Let $A$, $B$, $C$, and $D$ be independent events.
+  \begin{enumerate}
+  \item Show that $A\cap B$ and $C$ are independent events. (3 points)
+  \vspace{2in}
+  \item Show that $A\cup B \cup C$ and $D$ are independent events. (7 points)
+  \end{enumerate}
+\newpage
+\item (20 points) Consider the experiment where we roll two fair 6-sided die. 
+  \begin{enumerate}
+  \item What is the sample space for this experiment? Why is it reasonable that each outcome is equally likely? (4 points)
+  \vspace{1.5in}
+  \item What is the probability that doubles are rolled? (4 points)
+  \vspace{1.5in}
+  \item What is the probability doubles are rolled if the roll results in a sum of four or less? (4 points)
+  \vspace{1.5in}
+  \item What is the probability that at least one die roll is a six? (4 points)
+  \vspace{1.5in}
+  \item What is the probability at least one die roll is a six if the two dice land on different numbers? (4 points)
+  \end{enumerate}
+\newpage
+\item (22 points) A department store sells sport shirts in three sizes (small, medium, and large), three patterns (plaid, print, and stripe), and two sleeve lengths (long and short). The accompanying table gives the proportions of shirts sold in the various category combinations.
+\begin{center}
+\begin{tabular}{|c|c|ccc|}
+\hline
+Length & Size & Plaid & Print & Striped \\
+\hline
+Short & Small & .04 & .02 & .05 \\
+Short & Medium & .08 & .07 & .12 \\
+Short & Large & .03 & .07 & .08 \\
+Long & Small & .03 & .02 & .03 \\
+Long & Medium & .10 & .05 & .07 \\
+Long & Large & .04 & .02 & .08 \\
+\hline
+\end{tabular}
+\end{center}
+  \begin{enumerate}
+  \item What is the probability that the next shirt sold is a medium, long-sleeved, print shirt? (2 points)
+  \vspace{.85in}
+  \item What is the probability that the next shirt sold is a medium print shirt? (4 points)
+  \vspace{.85in}
+  \item What is the probability that the next shirt sold is a long sleeved shirt? (4 points)
+  \vspace{.85in}
+  \item What is the probability that the next shirt sold has a print pattern? (4 points)
+  \vspace{.85in}
+  \item If the next shirt sold was a short sleeved plaid, what is the probability it was of medium size? (4 points)
+  \vspace{1in}
+  \item If the next shirt sold was a medium plaid, what is the probability it was long sleeved? (4 points)
+  \end{enumerate}
+\newpage
+\item (15 points) Consider randomly selecting a single individual and having that person test drive three different vehicles. Suppose the probability the like the first vehicle is 55\%, the probability they like the second vehicle is 65\%, the probability they like the third vehicle is 70\%, the probability they like at least one of the first two vehicles is 80\%, the probability they like both the second and third vehicles is 40\% and the probability they like at least one vehicle is 88\%.
+  \begin{enumerate}
+  \item Establish event notation and rewrite the given probabilities using that notation. (3 points)
+  \vspace{1.25in}
+  \item What is the probability the individual likes both of the first two vehicles? (3 points)
+  \vspace{1.25in}
+  \item If they like the third vehicle, what is the probability they like the second? (3 points)
+  \vspace{1.25in}
+  \item Is the liking of the second vehicle independent of liking the third vehicle? (3 points)
+  \vspace{1.25in}
+  \item If they did not like the first vehicle, what is the probability they like at least one of the other two? (3 points)
+  \end{enumerate}
+\newpage
+\item (15 points) At a certain gas station, 40\% of the customers use regular gas, 35\% use plus gas and 25\% use premium gas. Of those customers using regular gas, only 30\% fill their tanks. Of those customers using plus gas, 60\% fill their tanks and of those customers using premium gas, 50\% fill their tanks.
+  \begin{enumerate}
+  \item Establish events notation for the type of gas purchased and the event of filling their tank. (2 points)
+  \vspace{1.5in}
+  \item What is the probability the next customer will request plus gas \textbf{and} fill the tank? (5 points)
+  \vspace{2in}
+  \item What is the probability the next customer fills the tank? (5 points)
+  \vspace{2in}
+  \item If the next customer fills the tank, what is the probability that regular gas is requested? (3 points)
+  \end{enumerate}
+\newpage
+\item (15 points) One of the assumptions underlying the theory of control charting is that successive plotted points are independent of one another. Each plotted point can signal either that a manufacturing process is operating correctly or that there is some sort of malfunction. Even when a process is running correctly, there is a small probability that any particular point will signal a problem with the process. Suppose that this probability is .05. 
+  \begin{enumerate}
+  \item What is the probability that at least one of 10 successive points indicates a problem when in fact the process is operating correctly? (5 points)
+  \vspace{2.5in}
+  \item What is the probability that at least one of 25 successive points indicates a problem when in fact the process is operating correctly? (5 points) 
+  \vspace{2.5in}
+  \item Suppose I let the process continue on uninterrupted, use your answers to (a) and (b) to speculate as to what will happen. (5 points)
+  \end{enumerate}
+\end{enumerate}

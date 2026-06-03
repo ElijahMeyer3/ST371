@@ -1,0 +1,18 @@
+---
+title: ""
+format: pdf
+---
+
+#### Proof Expectation 
+
+Please note: pictures are good for convincing yourself the statement is true, but are not generally considered mathematical proof. The expectation for proofs are that you show each step appropriatley, AND you have some justification for each step that you are taking. This helps you demonstrate complete understanding of the material/situation. You may either name a property/axiom you are using, or describe in what is allowing you to make the claim that you are.
+
+#### Example
+
+Show that $A^c = (A^c\cap B) \cup (A^c\cap B^c)$
+
+$(A^c \cap B)\cup(A^c \cap B^c) = A^c \cap (B \cup B^c)$ \quad Distributive Property
+
+$= A^c \cap \Omega$ \quad A set and its complement constitute the universal set
+
+$= A^c$ \quad intersection of a set with the universal set is the set itself

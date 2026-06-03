@@ -1,0 +1,64 @@
+---
+title: "Demorgan's Law: Complement of Intersections"
+format: pdf
+---
+
+$-(\bigcap_n S_n)^c = \bigcup_n S_n^c$
+
+“The complement of the intersection of the sets $S_n$ is equal to the union of the complements of the sets $S_n$.” We can also think about this more formally as: “Anything not in every set $S_n$ must fail to belong to at least one of the sets $S_n$.”
+
+#### Proof
+
+$(\bigcap_n S_n)^c = \bigcup_n S_n^c$
+
+We start these proofs by assuming a fixed element $x$ is a member of one side of the equation.
+
+Suppose
+$$
+x \in (\bigcap_n S_n)^c.
+$$
+
+Then $x \notin \bigcap_n S_n$. (definition of complement)
+
+That means it is not true that $x \in S_n$ for all $n$. (definition of intersection)
+
+So there exists at least one index $n$ such that
+
+$$
+x \notin S_n.
+$$
+
+Equivalently,
+$$
+x \in S_n^c.
+$$
+(definition of complement)
+
+Since $x$ belongs to at least one $S_n^c$, we have
+$$
+x \in \bigcup_n S_n^c.
+$$
+(definition of union)
+
+Therefore,
+$$
+(\bigcap_n S_n)^c \subseteq \bigcup_n S_n^c.
+$$
+(definition of subset)
+
+Note, we've shown a subset relation because we started with an assumption of membership on the left side of the equation, and showed there was the same membership for the right side (membership on the left -> membership on the right). This is the definition of a subset. In order to show equality of sets, we must do the proof in both directions. If we can show the proof in both directions, it means that each set contains exactly the same elements. So:
+
+
+Let $x \in \bigcup_n S_n^c$.
+
+Then there exists $n$ such that $x \in S_n^c$. (definition of union)
+
+So $x \notin S_n$. (definition of complement)
+
+Since $x \notin S_n$ for some $n$, it follows that $x \notin \bigcap_n S_n$. (definition of intersection)
+
+Thus $x \in (\bigcap_n S_n)^c$. (definition of complement)
+
+Therefore, $\bigcup_n S_n^c \subseteq (\bigcap_n S_n)^c$. (definition of subset)
+
+Because we have shown the proof in both directions, we can conclude that $-(\bigcap_n S_n)^c = \bigcup_n S_n^c$

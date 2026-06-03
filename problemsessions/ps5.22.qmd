@@ -1,0 +1,79 @@
+---
+title: "Problem Session 1"
+format: pdf
+editor: visual
+---
+
+#### Define notation in words
+
+-- $\in$
+
+-- $\notin$
+
+-- $\Omega$
+
+-- $|$
+
+-- $\subset$
+
+-- $\cap$
+
+-- $\cup$
+
+
+#### 
+
+For the following bullets, practice reading / writing these as sentences + defining each set: 
+
+$\Omega=\{1,2,3,4,5,6,7,8,9,10\}$
+
+$A=\{x\in\Omega\mid x\text{ is even}\}=\{. . .\}$
+
+$B=\{x\in\Omega\mid x\text{ is prime}\}=\{. . .\}$
+
+$x\in\Omega\mid x\in A\cap B =$
+
+$x\in\Omega\mid x\in A\cup B =$
+
+$x\notin A\cup B =$
+
+$A\cap(B\cup\{1,9\}) =$
+
+$x\in\Omega\mid(x\in A\cap B)\ \text{or}\ (x\notin A) =$
+
+\newpage
+
+#### Set manipulation 
+
+Let $A$ and $B$ be two sets.
+
+Using properties of set manipulation, show that... 
+
+$A^c = (A^c\cap B) \cup (A^c\cap B^c) \text{ and } B^c = (A\cap B^c) \cup (A^c\cap B^c)$ 
+
+Please note: pictures are good for convincing yourself the statement is true, but are not generally considered mathematical proof. 
+
+\underline{Hint}: recall the distributive property. When doing a proof, start with one side of the equation, and show that it equals the other side completely. 
+
+One-sided derivation = “Can I rewrite this expression step-by-step (ex. using algebra / set manipulation)?”
+
+
+
+\newpage
+
+#### **Complement of Intersections**
+
+Read this as a sentence: 
+
+-- $(\bigcap_{n} S_n)^c = \bigcup_{n} S_n^c$
+
+\vspace{3cm}
+
+
+Show that: $(\bigcap_n S_n)^c = \bigcup_n S_n^c$
+
+Two-sided proof = “Are these two sets actually the same?”
+
+\newpage 
+
+#### Intro to R/RStudio

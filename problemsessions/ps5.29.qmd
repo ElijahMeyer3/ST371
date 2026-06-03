@@ -1,0 +1,67 @@
+---
+title: "Problem Session II"
+format: pdf
+---
+
+## Question 1 
+
+A school club has 8 members. The club is sending 2 students to represent them at a regional event. One student will be assigned the role of team captain, and the other will be assigned the role of note-taker. Each role is different and must be filled by a different student.
+
+How many different ways can the club assign these two roles?
+
+
+
+-----------------------------------
+
+A teacher has a class of 8 students and wants to form a study pair. Each pair consists of 2 students who will work together. 
+How many different study pairs can be formed?
+
+\newpage
+
+## Question 2
+
+Suppose $A \subseteq B$.
+
+Let's prove that the P(A) $\le$ P(B).
+
+\newpage
+
+## Question 3 (Homework-2 Question 2)
+
+Show that for any two events $A$ and $B$, we have $P(A \cap B) \ge P(A) + P(B) - 1$.
+
+\newpage
+
+## Question 4 (Homework-2 Question 6)
+
+Before attempting to answer the following questions, perform the steps outlined below using the seed 1284:
+
+-- Generate a set containing the numbers 1 to 50000, and store that set in an object called ’Set1’.
+
+-- Using the sample() function, generate a set that contains values from Set1 in no particular order,
+allowing for repeats. Store this set in an object called Omega.
+
+-- Generate three subsets of Omega of size 100. Each individual subset is to be made without
+replacement, but each individual subset should sample from the full Omega. Label these sets A, B
+and C, in that order.
+
+-- To acheive the intended subsets, once you have written the appropirate code, run it
+all at the same time.
+
+(a) For each of the following, fill in the blank with the most appropriate symbol from: ∈, ̸∈ (5 points)
+
+i. 50000 __ Ω
+
+ii. 50000 __ C
+
+iii. 48231 __ Ω
+
+iv. 48231 __ A
+
+v. 2707 __ B
+
+
+(b) Do the sets generated, intersect? If so, state specifically which sets and what elements fall in the
+intersection.
+
+
