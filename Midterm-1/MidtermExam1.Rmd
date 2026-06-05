@@ -1,0 +1,349 @@
+---
+output: 
+  pdf_document:
+    includes:
+      in_header: header.txt
+---
+\maketitle
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+\noindent Name:\underline{\hspace{2in}}
+\vspace{.2in}
+
+\noindent ID\#: \underline{\hspace{2in}}
+\vspace{.3in}
+
+Read before opening:
+
+\begin{itemize}
+\setlength{\itemsep}{.5em}
+\item Put your name and student ID number in the space provided above. This name should match the name used on Moodle and Gradescope.
+\item Illegible answers will be graded as incorrect. If multiple answers are given, neither will be graded. \textbf{It is strongly encouraged to use pencil.}
+\item You may use any non-internet-connected calculator (including TI-83/84/89 calculators).
+\item A copy of the formula sheet is provided at the end of the exam.
+\item No materials other than those listed above are allowed to be used when taking this exam, including other electronic devices.
+\item Unless otherwise specified, give answers to 4 decimal places.
+\item Show all work on free response questions to receive full credit. This includes reporting answers using proper notation when applicable. 
+\item You have 75-minutes to take this exam. 
+\end{itemize}
+\vspace{.2in}
+
+\textbf{Honor Pledge: I certify that I have not received or given unauthroized aid in taking this exam.}
+\vspace{.25in}
+
+\textbf{Signature:}\underline{\hspace{3in}}
+
+\newpage
+
+#### Multiple Choice Questions: Unless otherwise specified, multiple choice, true/false, and fill in the blank questions have only one correct answer and are worth 3 points each. \
+
+\begin{enumerate}
+\item Which of the following symbols means "is a subset of"?
+\vspace{-.15in}
+  \begin{multicols}{2}
+  \begin{enumerate}
+  \item $\in$
+	\item $\notin$
+	\item $|$
+	\item $\subset$ 
+	\item $\cup$
+	\item $\cap$
+  \end{enumerate}
+  \end{multicols}
+\vspace{-.15in}
+\item True or False: Given the same values of n and k, the number of permutations is always greater than or equal to the number of combinations.
+\vspace{-.15in}
+  \begin{multicols}{2}
+  \begin{enumerate}
+  \item TRUE
+  \item FALSE
+  \end{enumerate}
+  \end{multicols}
+\vspace{-.15in}
+\item Let $A_1$ and $A_2$ be disjoint events from a sample space $\Omega$. Which of the following is true regarding the events $A_1$ and $A_2$?
+\vspace{-.15in}
+  \begin{multicols}{2}
+  \begin{enumerate}
+  \item $\p(A_1 \cup A_2) > 1$
+  \item $\p(A_1 \cap A_2) > 0$
+  \item $\p(A_1 \cup A_2) = \p(A_1) + \p(A_2) - \p(A_1\cap A_2)$
+  \item $\p(A_1) + \p(A_2) = 1$
+  \item $\p(A_1^c) + \p(A_2^c) = 1$
+  \end{enumerate}
+  \end{multicols}
+\vspace{-.15in}
+\item For the discrete uniform probability law, what is the denominator in the probability formula? \ 
+
+$P(A) = \frac{\text{number of elements in A}}{\square}$ \
+
+\vspace{.5cm}
+
+\vspace{-.15in}
+  \begin{multicols}{2}
+  \begin{enumerate}
+  \item number of outcomes in the event A
+  \item number of elements in the sample space
+  \item the number of possible events
+  \item the probability of A
+  \item 1
+  \item 0
+  \end{enumerate}
+  \end{multicols}
+\vspace{-.15in}
+\item Let $A$, $B$, and $C$ be events from a sample space $\Omega$. What is the appropriate value(s) for \\ $\p(A\cup C) + \p(A^c \cap C^c) = \square$
+  \begin{multicols}{2}
+  \begin{enumerate}
+  \item $(0, 1)$
+  \item $[0, 1]$
+  \item $0$
+  \item $1$
+  \item (-$\infty$, $\infty$)
+  \end{enumerate}
+  \end{multicols}
+\vspace{-.15in}
+\item Let $A$ and $B$ be events from a sample space $\Omega$ such that $A\subset B$. Which of the following is true?
+\vspace{-.15in}
+  \begin{multicols}{2}
+  \begin{enumerate}
+  \item $A\cup B = A$
+  \item $A^c \cup B^c = A^c$
+  \item $A^c \cap B^c = \Omega$
+  \item $A \cap B = \emptyset$
+  \item $A^c = B^c$
+  \item $\Omega^c = B$
+  \end{enumerate}
+  \end{multicols}
+\vspace{-.15in}
+\item Let $A$ and $B$ be independent events from a sample space $\Omega$. The events $A$ and $B$ are also disjoint.
+\vspace{-.15in}
+  \begin{multicols}{2}
+  \begin{enumerate}
+  \item TRUE
+  \item FALSE
+  \end{enumerate}
+  \end{multicols}
+\vspace{-.15in}
+\item Let $A$ and $B$ be independent events from a sample space $\Omega$. Then, given the occurence of an event $C$, $A$ and $B$ are conditionally independent as well.
+\vspace{-.15in}
+  \begin{multicols}{2}
+  \begin{enumerate}
+  \item TRUE
+  \item FALSE
+  \end{enumerate}
+  \end{multicols}
+\vspace{-.15in}
+\item If $\p(A|B) = 0$, then $A$ can occur when $B$ occurs.
+\vspace{-.15in}
+  \begin{multicols}{2}
+  \begin{enumerate}
+  \item TRUE
+  \item FALSE
+  \end{enumerate}
+  \end{multicols}
+\end{enumerate}
+\newpage
+\textbf{Use the following for questions 10 to 15:} Suppose the following code is ran. Answer the following questions regarding the code and the results.
+```{r,eval=FALSE}
+set.seed(123)
+data.temp <- seq(from=1, to=10000,by=1)
+data <- sample(data.temp, size=length(data.temp)/2, replace=FALSE)
+head(data)
+is.element(4431,data.temp)
+is.element(4431,data)
+intersect(data.temp,data)
+union(data.temp,data)
+```
+\begin{enumerate}
+\setcounter{enumi}{9}
+\item How many elements are contained in the set 'data'? (3 points)
+\vspace{.5in}
+\item The element 123 can appear in the set 'data' more than once.
+\vspace{-.15in}
+  \begin{multicols}{2}
+  \begin{enumerate}
+  \item TRUE
+  \item FALSE
+  \end{enumerate}
+  \end{multicols}
+\vspace{-.15in}
+\item The line of code 'is.element(4431,data.temp)' returns the logical operator FALSE.
+\vspace{-.15in}
+  \begin{multicols}{2}
+  \begin{enumerate}
+  \item TRUE
+  \item FALSE
+  \item Not enough information
+  \end{enumerate}
+  \end{multicols}
+\vspace{-.15in}
+\item The line of code 'is.element(4431,data)' returns the logical operator FALSE.
+\vspace{-.15in}
+  \begin{multicols}{2}
+  \begin{enumerate}
+  \item TRUE
+  \item FALSE
+  \item Not enough information
+  \end{enumerate}
+  \end{multicols}
+\vspace{-.15in}
+\item Which of the following is the result of running the line 'intersect(data.temp,data)'.
+\vspace{-.15in}
+  \begin{multicols}{2}
+  \begin{enumerate}
+  \item Returns the logical operator FALSE.
+  \item Returns the logical operator TRUE.
+  \item Outputs the entire 'data.temp' set.
+  \item Outputs the entire 'data' set.
+  \item Outputs the empty set.
+  \end{enumerate}
+  \end{multicols}
+\vspace{-.15in}
+\item Which of the following is the result of running the line 'union(data.temp,data)'.
+\vspace{-.15in}
+  \begin{multicols}{2}
+  \begin{enumerate}
+  \item Returns the logical operator FALSE.
+  \item Returns the logical operator TRUE.
+  \item Outputs the entire 'data.temp' set.
+  \item Outputs the entire 'data' set.
+  \item Outputs the empty set.
+  \end{enumerate}
+  \end{multicols}
+\vspace{-.15in}
+\item A cybersecurity analyst is creating a new password policy. Passwords must be exactly 8 characters long and can consist of uppercase letters (A-Z; 26 in total) or digits (0-9). How many distinct passwords are possible if repetition of characters is allowed?
+\vspace{-.15in}
+  \begin{multicols}{2}
+  \begin{enumerate}
+  \item $(26+10)^8$
+  \item $8^{36}$
+  \item $26^8 + 10^8$
+  \item $P_{36,8}$
+  \item $C_{36,8}$
+  \item $36!$
+  \end{enumerate}
+  \end{multicols}
+\vspace{-.15in}
+\item A chemistry professor has narrowed down a candidate pool for her lab to 10 extremely qualified applicants and any of them would be a good fit for the 4 positions available. If the professor were to choose randomly, how many different labratory staffs could be created?
+\vspace{-.15in}
+  \begin{multicols}{2}
+  \begin{enumerate}
+  \item $10^4$
+  \item $10!$
+  \item $5040$
+  \item $210$
+  \item $40$
+  \item $10$
+  \end{enumerate}
+  \end{multicols}
+\end{enumerate}
+\newpage
+\textbf{Use the following for questions 18 to 21:} A researcher is designing an experiment involving three different important considerations: drug dosage, drug administration method, and environmental conditions. An experimental trial consists of selecting exactly one variation from each of the three considerations below. Suppose the different considerations can occur in any of the following ways:
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Drug Dosage & Low Dose, Medium Dose, High Dose, Placebo \\
+\hline
+Administration Method & Oral, Intravenous, Topical \\
+\hline
+Environmental Conditions & $20^{\circ}C \text{ with high humidity}$ \\
+& $20^{\circ}C \text{ with low humidity}$\\
+& $20^{\circ}C \text{ with no humidity}$ \\
+& $30^{\circ}C \text{ with high humidity}$\\
+& $30^{\circ}C \text{ with low humidity}$ \\
+& $30^{\circ}C \text{ with no humidity}$ \\
+\hline
+\end{tabular}
+\end{center}
+\begin{enumerate}
+\setcounter{enumi}{17}
+\item How many different unique experimental trials are possible? (4 points)
+\vspace{.75in}
+\item Suppose the researcher decides that a high dosage cannot be combined with oral administration due to adverse interactions. How many different unique experimental trials are still possible under this restriction? (4 points) 
+\vspace{1.5in}
+\item Suppose the researcher, to maintain experimental integrity and avoid confounding variables, chooses the variations of the considerations at random. What is the probability the trial will conducted with no humidity in the environment? (4 points)
+\vspace{1.5in}
+\item Suppose the researcher, to maintain experimental integrity and avoid confounding variables, chooses the variations of the considerations at random. What is the probability the trial will be conducted at $30^{\circ}C$? (4 points)
+\end{enumerate}
+\newpage
+\textbf{Use the following for question 22 to 29:} For each of the questions below shade the region of the Venn Diagram suggested by the given event. (3 points each)
+\begin{multicols}{2}
+\begin{enumerate}
+\setcounter{enumi}{21}
+\item $A\cap B\cap C \cap D$
+\begin{flushleft}
+\includegraphics[height=1.5in,width=3in]{venndiagram.png}
+\end{flushleft}
+\item $A^c\cap B^c$
+\begin{flushleft}
+\includegraphics[height=1.5in,width=3in]{venndiagram.png}
+\end{flushleft}
+\item $(A\cup B\cup C\cup D)^c$
+\begin{flushleft}
+\includegraphics[height=1.5in,width=3in]{venndiagram.png}
+\end{flushleft}
+\item $A^c \cap B \cap C^c \cap D$
+\vspace{-.1in}
+\begin{flushleft}
+\includegraphics[height=1.5in,width=3in]{venndiagram.png}
+\end{flushleft}
+\item $A \cap B^c \cap C \cap D$
+\begin{flushleft}
+\includegraphics[height=1.5in,width=3in]{venndiagram.png}
+\end{flushleft}
+\item $(C\cap D) \cup (B\cap D)$
+\begin{flushleft}
+\includegraphics[height=1.5in,width=3in]{venndiagram.png}
+\end{flushleft}
+\item $(A^c \cap B^c \cap C \cap D^c) \cup (A\cap B\cap C)$
+\begin{flushleft}
+\includegraphics[height=1.5in,width=3in]{venndiagram.png}
+\end{flushleft}
+\item $(A\cap B^c \cap C^c \cap D)^c$
+\begin{flushleft}
+\includegraphics[height=1.5in,width=3in]{venndiagram.png}
+\end{flushleft}
+\end{enumerate}
+\end{multicols}
+\newpage
+\textbf{Use the following for questions 30 to 33:} A car dealer sold 750 automobiles last year. The accompanying table gives the proportions of cars sold in the various category combinations. The events in the table form a collectively exhaustive partition of the sample space.
+\begin{center}
+\begin{tabular}{ccccc}
+\hline
+Size & White & Black & Red & Grey \\
+\hline
+Small & .10 & .0697 & .0323 & .1313 \\
+Midsize & .099 & .0723 & .0413 & .1207 \\
+Large & .0723 & .089 & .061 & .1111 \\
+\hline
+\end{tabular}
+\end{center}
+\begin{enumerate}
+\setcounter{enumi}{29}
+\item What is the probability that the next car sold is a Midsize White car?  (4 points)
+\vspace{1.25in}
+\item If the car is red, what is the probability that it is not large? (4 points)
+\vspace{1.25in}
+\item If the car is not small, what is the probability that it is not white? (4 points)
+\vspace{1.25in}
+\item List two conditions would make this table invalid as a probability model? Be specific / give examples in the context of the problem. (4 points)
+\end{enumerate}
+\newpage
+\textbf{Use the following for questions 34 to 37:} There are three classes that students have different preferences for at a certain school inside a certain castle. Let $P$ define the event that students like Potions class, let $T$ define the event that students like Transfiguration class and let $D$ define the event that students like Defense Against the Dark Arts class. Suppose that $\p(P^c)=.45$, $\p(T)=.65$, $\p(D^c)=.3$, $\p(P\cup T)=.8$, $\p(T^c\cup D^c)=.6$ and $\p(P^c\cap T^c \cap D^c) = .12$
+\begin{enumerate}
+\setcounter{enumi}{33}
+\item What is the probability students like both the Potions and Transfiguration classes? (5 points)
+\vspace{1.5in}
+\item What is the probability that a student likes Transfiguration given that the student likes Potions? (5 points)
+\vspace{1.5in}
+\item Are the events of liking Transfiguration and Defense Against the Dark Arts classes independent? (5 points)
+\vspace{1.5in}
+\item If students do not like Potions class, what is the probability they will like at least one of the other two classes? (5 points)
+\end{enumerate}
+
+
+

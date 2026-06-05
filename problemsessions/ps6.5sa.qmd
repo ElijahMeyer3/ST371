@@ -1,0 +1,278 @@
+---
+title: "Problem Session III: Discussion"
+format: pdf
+---
+
+#### Warm-up question 
+
+What is the difference between conditional and unconditional probability?
+
+#### Question 1
+
+A university surveyed students about whether they own a car and whether they live on campus.
+
+The following information was collected:
+
+60% of students own a car.
+15% of students both own a car and live on campus.
+43% of students live on campus.
+
+Construct a probability tree diagram (see page 6 of your guided notes) based on this information. 
+
+**Key talking points**
+
+We can't define any probabilities without defining events. We know: 
+
+C = student owns a car
+L = student lives on campus
+
+We then also know the compliments of each!
+
+$C^c$ = student does not own a car
+
+$L^c$ = student does not live on campus. 
+
+Next, let's write out what we do know: 
+
+$P(C) = 0.60$
+
+$P(L) = .43$
+
+$P(C \cap L) = .15$
+
+We also know by the rule of compliments that 
+
+$P(C^c) = .4$
+
+$P(L^c) = .57$
+
+**Now** let's start with event C.
+
+```{verbatim}
+Start
+├── C (0.60)
+│   ├── 
+│   └── 
+│
+└── Cᶜ (0.40)
+    ├── 
+    └── 
+```   
+
+When building a tree diagram, we know that the next branch is a **conditional** probability given the event that we already calculated the probability for. So, we are interested in...
+
+```{verbatim}
+Start
+├── C (0.60)
+│   ├── L | C
+│   └── Lc | C
+│
+└── Cc (0.40)
+    ├── L | Cc
+    └── Lc | Cc
+```    
+    
+By the definition of conditional probability, we can re-write P(L | C) as follow!
+
+$P(L \mid C) = \frac{P(L \cap C)}{P(C)}$
+
+And we know each of these values!
+
+$= \frac{0.15}{0.60} = 0.25$
+
+**This tells us exactly what $P(L^c | C)$ is! Based on the conditional complement rule, we know that** 
+
+$P(L^c | C) + P(L | C) = 1$
+
+$P(L^c | C) + 0.25 = 1$
+
+$P(L^c | C) = .75$
+
+```{verbatim}
+Start
+├── C (0.60)
+│   ├── L | C (.25)
+│   └── Lc | C (.75)
+│
+└── Cc (0.40)
+    ├── L | Cc
+    └── Lc | Cc
+```    
+
+Now, let's calculate the $P(L | C^c)$. We are again going to use the definition of conditional probability. 
+
+$P(L | C^c) = \frac{P(L \cap C^c)}{P(C^c)}$
+
+I know the $P(C^c)$! I don't know the numerator though..... But I do know some pieces that can help me calculate it. Let's explore based on the events. 
+
+We know that $L = (L \cap C) \cup (L \cap C^c)$ because the outcome of the events are disjoint! That is, a student can not own a car and not own a car at the same time! 
+
+Because of this, we can use the **law of total probability** to rewrite this into the following: 
+
+$P(L) = P(L \cap C) + P(L \cap C^c)$ **and I know two of these three probabilities**! 
+
+$.43 = .15 + P(L \cap C^c)$
+
+$P(L \cap C^c) = .28$
+
+So...
+
+$P(L | C^c) = \frac{.28}{.40} = .70$
+
+And because of conditional complements, we know that...
+
+$P(L^c | C^c) = \frac{.28}{.40} = .3$
+
+```{verbatim}
+Start
+├── C (0.60)
+│   ├── L | C (.25)
+│   └── Lc | C (.75)
+│
+└── Cc (0.40)
+    ├── L | Cc (.70)
+    └── Lc | Cc (.30)
+```   
+    
+**Takeaway**: Use what you know as a clue on how to explore/rewrite probabilities that you are trying to solve!
+
+
+\newpage 
+
+#### Question 2 
+
+A department store sells sport shirts in three sizes (small, medium, and large), three
+patterns (plaid, print, and stripe), and two sleeve lengths (long and short). The accompanying table
+gives the proportions of shirts sold in the various category combinations.
+
+| Length | Size   | Plaid | Print | Striped |
+|--------|--------|-------|-------|----------|
+| Short  | Small  | 0.04  | 0.02  | 0.05     |
+| Short  | Medium | 0.08  | 0.07  | 0.12     |
+| Short  | Large  | 0.03  | 0.07  | 0.08     |
+| Long   | Small  | 0.03  | 0.02  | 0.03     |
+| Long   | Medium | 0.10  | 0.05  | 0.07     |
+| Long   | Large  | 0.04  | 0.02  | 0.08     |
+
+(a) What is the probability that the next shirt sold is a medium, long-sleeved, print shirt? (2 points)
+
+**The outcomes of each of our three events are defined!** Thus, we can "simply" find the probability we are looking for in the table based on the context.
+
+| Length | Size   | Plaid | Print | Striped |
+|--------|--------|-------|-------|----------|
+| Long   | Medium | 0.10  | **0.05**  | 0.07     |
+
+
+$P(medium \cap long \cap print) = 0.05$
+
+\vspace{6em}
+
+
+(b) What is the probability that the next shirt sold is a medium print shirt? (4 points)
+
+First, we start out by writing the probability statement we want to solve for: $P(medium \cap print)$. Next, we ask ourselves, "how many ways can we see a medium print shirt"? The answer is two, as this type of shirt can either be length short or long. **Because the outcomes of the event are disjoint**, we can use additivity: $P(medium \cap print) = P(medium \cap print \cap short) + P(medium \cap print \cap long)$. Again, turns into a game of locate the correct probabilities, and add them together. 
+
+$= 0.07 + 0.05 = .12$
+
+
+
+\vspace{6em}
+
+
+(c) What is the probability that the next shirt sold is a long sleeved shirt? (4 points)
+
+**Use the same logic in b to answer this question!**
+
+\vspace{6em}
+
+
+(d) What is the probability that the next shirt sold has a print pattern? (4 points)
+
+**use the same logic in b to answer this question**
+
+\vspace{6em}
+
+
+(e) **If** the next shirt sold was a short sleeved plaid, what is the **probability** it was of medium size? (4
+points)
+
+I've highlighted two words in this problem that I want us to focus on: "If" and "probability". These words give us clues as to how we can build our probability statement we are trying to find. 
+
+Words like **if**, **conditioned**, **given**, help us understand an outcome of an event that has already happened. This goes to the right of the | in our conditional statement. 
+
+**probability** clues us into what we are actually trying to calculate the probability of, and what will go to the left of our |. 
+
+Thus, we are tying to solve: $P(medium | short \cap plaid)$
+
+And we can rewrite this using the definition of conditional probability .... 
+
+$\frac{P(medium \cap short \cap plaid)}{P(short \cap plaid)}$
+
+Now we can ask ourselves, what do we know? Well I know $P(medium \cap short \cap plaid)$ because each event has an outcome defined! I don't know $P(short \cap plaid)$, but I have everything I need to solve it. 
+
+-- I know the outcomes of **Size** are disjoint (can't be large and a small shirt)
+
+-- I know that a short plaid shirt can happen three different ways (small, medium, and large)
+
+Thus, based on additivity... 
+
+$\frac{P(medium \cap short \cap plaid)}{P(short \cap plaid \cap small) + P(short \cap plaid \cap medium) + P(short \cap plaid \cap large)}$
+
+And I can find these values from the table! 
+
+$\frac{.08}{.04 + .08 + .03} = .533$
+
+
+
+
+
+\vspace{6em}
+
+
+(f) If the next shirt sold was a medium plaid, what is the probability it was long sleeved? (4 points)
+
+**use the same logic as in e to answer the question**
+
+
+\vspace{6em}
+
+\newpage
+
+#### Question 3 
+
+What would make this an invalid joint probability distribution?
+
+Try and think of two potentail ideas...
+
+| Length | Size   | Plaid | Print | Striped |
+|--------|--------|-------|-------|----------|
+| Short  | Small  | 0.04  | 0.02  | 0.05     |
+| Short  | Medium | 0.08  | 0.07  | 0.12     |
+| Short  | Large  | 0.03  | 0.07  | 0.08     |
+| Long   | Small  | 0.03  | 0.02  | 0.03     |
+| Long   | Medium | 0.10  | 0.05  | 0.07     |
+| Long   | Large  | 0.04  | 0.02  | 0.08     |
+
+
+
+**Try this question on your own, and reach out if you have any questions!**
+
+
+\newpage
+
+#### Question 4 
+
+A city survey categorizes households by pet ownership and activity level: 
+
+| Group      | Highly Active | Not Highly Active |
+| ---------- | ------------- | ----------------- |
+| Dog owners | 0.30          | 0.20              |
+| Cat owners | 0.15          | 0.15              |
+| No pets    | 0.05          | 0.15              |
+
+
+-- Compute the probability that a randomly selected household is highly active. 
+
+-- Compute the probability that a household owns a dog given that it is highly active. 
+
+**Try this question on your own, and reach out if you have any questions!**

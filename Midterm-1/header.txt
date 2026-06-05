@@ -1,0 +1,15 @@
+\usepackage{amsmath,amssymb,amsthm,graphicx,enumerate,multicol}
+\usepackage{bookmark,tabularx,units,hyperref,mathtools,comment,mathrsfs}
+\usepackage[utf8]{inputenc}
+\usepackage{cancel}
+\usepackage[english]{babel}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\s}{\mathbb{S}}
+\newcommand{\p}{\mathbb{P}}
+\newcommand{\intt}{\int_{-\infty}^{\infty}}
+\newcommand{\estimator}{\hat{\Theta}_n}
+
+\title{ST371: Midterm Exam 1}
